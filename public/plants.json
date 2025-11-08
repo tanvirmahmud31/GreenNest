@@ -1,0 +1,76 @@
+
+[
+  {
+    "plantId": 1,
+    "plantName": "Snake Plant",
+    "category": "Air Purifier",
+    "price": 18,
+    "rating": 4.8,
+    "availableStock": 10,
+    "careLevel": "Easy",
+    "description": "A hardy and resilient indoor plant famous for its strong air‑purifying ability. Snake Plants thrive in both bright and low‑light areas and require very little water, making them ideal for busy plant lovers and beginners. They release oxygen at night, helping improve bedroom air quality and supporting better sleep.",
+    "image": "https://images.unsplash.com/photo-1687552212914-03a30c82053c?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8U25ha2UlMjBQbGFudHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=600",
+
+    "providerName": "UrbanGreen Studio"
+  },
+  {
+    "plantId": 2,
+    "plantName": "Peace Lily",
+    "category": "Flowering",
+    "price": 22,
+    "rating": 4.7,
+    "availableStock": 15,
+    "careLevel": "Medium",
+    "description": "A graceful and soothing indoor plant known for its glossy leaves and elegant white blooms. Peace Lilies are excellent at removing harmful indoor toxins while adding a touch of calm and beauty to any space. With proper watering and indirect light, they bloom throughout the year and thrive in homes and offices alike.",
+    "image": "https://images.unsplash.com/photo-1579977338243-d5017ac698e6?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2070",
+    "providerName": "Tropical Leaf House"
+  },
+  {
+    "plantId": 3,
+    "plantName": "Aloe Vera",
+    "category": "Medicinal",
+    "price": 16,
+    "rating": 4.6,
+    "availableStock": 20,
+    "careLevel": "Easy",
+    "description": "A popular medicinal succulent valued for its healing gel used in skincare, soothing burns, and natural remedies. Aloe Vera thrives in sunny windows, needs minimal watering, and helps purify indoor air. Its simple care requirements and multiple health benefits make it a must‑have plant for natural home wellness.",
+    "image": "https://images.unsplash.com/photo-1632380211596-b96123618ca8?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=764",
+    "providerName": "NatureCare Gardens"
+  },
+  {
+    "plantId": 4,
+    "plantName": "Areca Palm",
+    "category": "Air Purifier",
+    "price": 30,
+    "rating": 4.9,
+    "availableStock": 8,
+    "careLevel": "Medium",
+    "description": "A lush, tropical indoor palm that brings instant freshness and elegance to any room. Areca Palm naturally humidifies the air while removing indoor pollutants, making it perfect for bedrooms and living spaces. With graceful fronds and bright foliage, it enhances home décor while creating a calm and refreshing environment.",
+    "image": "https://images.unsplash.com/photo-1615309363679-fed456ff8113?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=672",
+    "providerName": "GreenNest Nursery"
+  },
+  {
+    "plantId": 5,
+    "plantName": "ZZ Plant",
+    "category": "Low Light",
+    "price": 25,
+    "rating": 4.8,
+    "availableStock": 12,
+    "careLevel": "Easy",
+    "description": "An incredibly tough and low‑maintenance houseplant perfect for beginners and low‑light spaces. The ZZ Plant thrives even with neglect and infrequent watering, making it ideal for offices, bedrooms, and dim corners. Its glossy, wax‑like leaves add a sleek modern touch while naturally purifying indoor air.",
+    "image": "https://images.unsplash.com/photo-1622673037877-18ee56d1f990?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8WlolMjBQbGFudHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=600",
+    "providerName": "Urban Leaf Hub"
+  },
+  {
+    "plantId": 6,
+    "plantName": "Monstera Deliciosa",
+    "category": "Decorative",
+    "price": 35,
+    "rating": 4.9,
+    "availableStock": 5,
+    "careLevel": "Medium",
+    "description": "A stylish and iconic indoor plant known for its dramatic split leaves and bold tropical presence. Monstera Deliciosa grows quickly in bright, indirect light and becomes a stunning décor centerpiece. It brings lush jungle vibes and enhances modern, minimalist, and bohemian interiors with ease.",
+    "image": "https://images.unsplash.com/photo-1614594975525-e45190c55d0b?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=764",
+    "providerName": "EcoBloom Plants"
+  }
+]

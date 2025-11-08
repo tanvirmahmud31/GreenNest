@@ -1,0 +1,29 @@
+[
+  {
+    "title": "Watering Tips",
+    "tips": [
+      "Water most indoor plants when the top 1–2 inches of soil feel dry.",
+      "Avoid overwatering — it is the most common reason plants die.",
+      "Use room-temperature water to avoid shocking roots.",
+      "Ensure pots have drainage holes to prevent root rot."
+    ]
+  },
+  {
+    "title": "Sunlight Tips",
+    "tips": [
+      "Most indoor plants thrive in bright, indirect sunlight.",
+      "Rotate plants weekly so all sides receive light equally.",
+      "Avoid harsh afternoon sunlight, which can burn leaves.",
+      "Low-light plants can survive in shaded corners, but growth may slow."
+    ]
+  },
+  {
+    "title": "Fertilizing Tips",
+    "tips": [
+      "Fertilize only during the growing season (spring & summer).",
+      "Use a balanced liquid fertilizer every 4–6 weeks.",
+      "Avoid fertilizing stressed or newly-repotted plants.",
+      "Dilute fertilizer to half strength for sensitive plants."
+    ]
+  }
+]
