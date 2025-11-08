@@ -8,6 +8,7 @@ import DetailPlants from "../Pages/DetailPlants";
 import AuthLayouts from "../Layouts/AuthLayouts";
 import Login from "../Pages/Login";
 import Register from "../Pages/Register";
+import PrivateRouter from "../Provider/PrivateRouter";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -46,7 +47,9 @@ export const router = createBrowserRouter([
 
   {
     path:'detailPlant/:id',
-    element:<DetailPlants></DetailPlants>,
+    element:<PrivateRouter>
+      <DetailPlants></DetailPlants>
+    </PrivateRouter>,
     loader:()=>fetch('/plants.json'),
   }
 ]);
