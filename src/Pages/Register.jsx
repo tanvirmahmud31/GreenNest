@@ -1,28 +1,40 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import logo from '../assets/green-nest-logo.avif';
-import { Link } from 'react-router';
+import { Link, useNavigate } from 'react-router';
 import { AuthContext } from '../Provider/AuthProvider';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Register = () => {
-
-const { setUser, createUser } = useContext(AuthContext);
+    const { setUser, createUser } = useContext(AuthContext);
+    const navigate = useNavigate();
+    const [error, setError] = useState("");
 
     const handleRegisterForm = (e) => {
         e.preventDefault();
+
         const name = e.target.name.value;
         const email = e.target.email.value;
         const photo = e.target.photo.value;
         const password = e.target.password.value;
 
-        console.log(name, email, photo, password);
+        // ✅ Password validation: at least 6 chars, one uppercase, one lowercase
+        const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
+        if (!passwordRegex.test(password)) {
+            setError("Password must be at least 6 characters, include one uppercase and one lowercase letter");
+            return;
+        }
 
-        createUser(email, password)
+        createUser(email, password,name,photo)
             .then(result => {
                 const user = result.user;
                 setUser(user);
+                toast.success("✅ Registration Successful!");
+                navigate('/'); // redirect to home
             })
-            .catch(error => {
-                console.log("error", error);
+            .catch(err => {
+                console.log("error", err);
+                toast.error(err.message);
             });
     };
 
@@ -66,6 +78,8 @@ const { setUser, createUser } = useContext(AuthContext);
 
                     </fieldset>
 
+                    {error && <p className="text-red-700">{error}</p>}
+
                     <button className="btn bg-[#3a5b43] hover:bg-[#2f4b37] text-white w-full">
                         Register
                     </button>
@@ -73,15 +87,7 @@ const { setUser, createUser } = useContext(AuthContext);
                     <div className="divider text-sm text-gray-500">or</div>
 
                     <button className="btn bg-white border border-gray-200 hover:bg-gray-100 text-black w-full flex gap-2 justify-center">
-                        <svg aria-label="Google logo" width="18" height="18" viewBox="0 0 512 512">
-                            <g>
-                                <path d="M0 0h512v512H0z" fill="#fff" />
-                                <path fill="#34a853" d="M153 292c30 82 118 95 171 60h62v48A192 192 0 0190 341" />
-                                <path fill="#4285f4" d="M386 400a140 175 0 0053-179H260v74h102q-7 37-38 57" />
-                                <path fill="#fbbc02" d="M90 341a208 200 0 010-171l63 49q-12 37 0 73" />
-                                <path fill="#ea4335" d="M153 219c22-69 116-109 179-50l55-54c-78-75-230-72-297 55" />
-                            </g>
-                        </svg>
+                        {/* Google Icon */}
                         Register with Google
                     </button>
 
@@ -89,8 +95,9 @@ const { setUser, createUser } = useContext(AuthContext);
                         Already have an account? 
                         <Link to="/auth/login" className="text-[#3a5b43] font-bold hover:underline ml-1">Log In</Link>
                     </p>
-
                 </form>
+
+                <ToastContainer position="top-center" />
             </div>
         </div>
     );

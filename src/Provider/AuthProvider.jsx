@@ -1,6 +1,6 @@
 import React, { createContext, useEffect, useState } from 'react';
 import app from '../Firebase/Firebase.config';
-import { getAuth, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signOut } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signOut, updateProfile } from "firebase/auth";
 
 const auth = getAuth(app);
 
@@ -13,9 +13,14 @@ const AuthProvider = ({ children }) => {
     console.log(user)
 
     // ✅ Firebase Register Function
-    const createUser = (email, password) => {
+    const createUser = (email, password,name,photo) => {
         setLoading(true)
-        return createUserWithEmailAndPassword(auth, email, password);
+        return createUserWithEmailAndPassword(auth, email, password,name,photo)
+        .then((result) => {
+            // Update profile
+            return updateProfile(result.user, { displayName: name, photoURL: photo })
+                .then(() => result.user); // Return the updated user
+        });
     };
 
     // login 

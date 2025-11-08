@@ -22,13 +22,14 @@ export const router = createBrowserRouter([
             path:'/plants',
             Component:Plants,
         },
-        {
-            path:'/profile',
-            Component:Profile,
-        }
+        
     ]
     
   },
+  {
+            path:'/profile',
+            Component:Profile,
+        },
 
   {
     path:"/auth",
