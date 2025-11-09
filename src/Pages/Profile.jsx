@@ -16,14 +16,14 @@ const Profile = () => {
             displayName: name,
             photoURL: photo
         })
-        .then(() => {
-            setUser({ ...user, displayName: name, photoURL: photo });
-            alert('Profile updated successfully!');
-        })
-        .catch(err => {
-            console.error(err);
-            alert('Update failed: ' + err.message);
-        });
+            .then(() => {
+                setUser({ ...user, displayName: name, photoURL: photo });
+                alert('Profile updated successfully!');
+            })
+            .catch(err => {
+                console.error(err);
+                alert('Update failed: ' + err.message);
+            });
     };
 
     return (
@@ -37,29 +37,30 @@ const Profile = () => {
 
                     <div className='flex justify-between items-center shadow-amber-100'>
                         <div className='flex gap-3 items-center'>
-                        <div >
-                        <img
+                            <div >
+                                <img
                         src={photo || 'https://via.placeholder.com/150'}
                         alt="Profile"
                         className="rounded-full w-28 h-28 object-cover mx-auto mb-4 border-2 border-green-500"
                     />
-                    </div>
+                               
+                            </div>
 
-                    <div className="mb-4">
-                        
-                        <p className="text-gray-500 font-bold text-2xl">{user?.displayName}</p>
-                        <p className="text-gray-500">{user?.email}</p>
-                    </div>
-                    </div>
+                            <div className="mb-4">
 
-                    
+                                <p className="text-gray-500 font-bold text-2xl">{user?.displayName}</p>
+                                <p className="text-gray-500">{user?.email}</p>
+                            </div>
+                        </div>
 
-                    <button
-                        onClick={handleUpdate}
-                        className="btn bg-green-600 text-center text-white p-4"
-                    >
-                        Update Profile
-                    </button>
+
+
+                        <button
+                            onClick={handleUpdate}
+                            className="btn bg-green-600 text-center text-white p-4"
+                        >
+                            Update Profile
+                        </button>
                     </div>
                 </div>
             </main>
