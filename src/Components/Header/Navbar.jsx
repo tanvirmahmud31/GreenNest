@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { Link } from "react-router";
 import logo from "../../assets/green-nest-logo.avif";
 import { AuthContext } from "../../Provider/AuthProvider";
+import { NavLink } from "react-router";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
@@ -12,9 +13,9 @@ const Navbar = () => {
 
   const links = (
     <>
-      <li><Link to="/">Home</Link></li>
-      <li><Link to="/plants">Plants</Link></li>
-      <li><Link to="/profile">My Profile</Link></li>
+      <li><NavLink to="/">Home</NavLink></li>
+      <li><NavLink to="/plants">Plants</NavLink></li>
+      <li><NavLink to="/profile">My Profile</NavLink></li>
     </>
   );
 
@@ -22,14 +23,13 @@ const Navbar = () => {
     <nav className="bg-base-200">
       <div className="navbar w-11/12 mx-auto rounded-2xl p-3">
 
-        {/* Logo */}
+       
         <div className="navbar-start">
           <Link to="/" className="btn btn-ghost text-2xl font-bold">
             <img className="w-10 rounded-2xl" src={logo} alt="" /> GreenNest
           </Link>
         </div>
 
-        {/* Mobile Menu */}
         <div className="navbar-end lg:hidden">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost">
@@ -51,22 +51,22 @@ const Navbar = () => {
               {user ? (
                 <>
                   <div className="flex items-center gap-3 p-2">
-                    <img src={user.photoURL} alt="avatar" className="w-10 h-10 rounded-full" />
-                    <span className="font-semibold text-sm">{user.displayName}</span>
+                    <img src={user.photoURL}  className="w-10 h-10 rounded-full" />
+                    <span className="font-semibold text-start text-sm">{user.displayName}</span>
                   </div>
-                  <button className="btn btn-sm w-full" onClick={handleLogout}>Logout</button>
+                  <button className="btn btn-sm btn-accent w-full" onClick={handleLogout}>Logout</button>
                 </>
               ) : (
                 <>
-                  <li><Link className="btn mt-2 w-full" to="/auth/login">Login</Link></li>
-                  <li><Link className="btn mt-2 w-full" to="/auth/register">Register</Link></li>
+                  <li><NavLink className="btn mt-2 w-full" to="/auth/login">Login</NavLink></li>
+                  <li><NavLink className="btn mt-2 w-full" to="/auth/register">Register</NavLink></li>
                 </>
               )}
             </ul>
           </div>
         </div>
 
-        {/* Desktop Menu */}
+      
         <div className="navbar-end hidden lg:flex gap-4">
           <ul className="menu menu-horizontal px-1">{links}</ul>
 
@@ -78,14 +78,14 @@ const Navbar = () => {
                 </div>
               </label>
               <ul tabIndex={0} className="dropdown-content menu bg-base-100 shadow rounded-box w-52 mt-4 p-2">
-                <li className="p-2 font-semibold text-center">{user.displayName}</li>
-                <li><button onClick={handleLogout}>Logout</button></li>
+                <li className="p-2 font-semibold ">{user.displayName}</li>
+                <li><button className="btn btn-accent" onClick={handleLogout}>Logout</button></li>
               </ul>
             </div>
           ) : (
             <>
-              <Link className="btn" to="/auth/login">Login</Link>
-              <Link className="btn" to="/auth/register">Register</Link>
+              <NavLink className="btn" to="/auth/login">Login</NavLink>
+              <NavLink className="btn" to="/auth/register">Register</NavLink>
             </>
           )}
         </div>
