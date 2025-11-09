@@ -10,7 +10,7 @@ export const AuthContext = createContext(null);
 const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
     const [loading,setLoading]= useState(true)
-    console.log(user)
+   // console.log(user)
 
     // ✅ Firebase Register Function
     const createUser = (email, password,name,photo) => {

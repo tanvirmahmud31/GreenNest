@@ -33,7 +33,7 @@ const Register = () => {
                 navigate('/');
             })
             .catch(err => {
-                console.log("error", err);
+                //console.log("error", err);
                 toast.error(err.message);
             });
     };

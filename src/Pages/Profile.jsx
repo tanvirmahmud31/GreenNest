@@ -25,7 +25,7 @@ const Profile = () => {
             setEditMode(false);
         })
         .catch(err => {
-            console.error(err);
+            //console.error(err);
             alert('Update failed: ' + err.message);
         });
     };
